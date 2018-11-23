@@ -574,7 +574,7 @@ $lang['strloginfailed'] = 'لم تنجح عملية الدخول';
  $lang['strrows2'] = 'Rows';
 
  // Miscellaneous
- $lang['strtopbar'] = '%s يعمل على %s:%s -- You are logged in as user "%s"';
+ $lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- You are logged in as user "%s"';
  $lang['strtimefmt'] = 'jS M, Y g:iA';
  $lang['strhelp'] = 'مساعدة';
 

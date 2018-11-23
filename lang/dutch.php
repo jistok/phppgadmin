@@ -401,7 +401,7 @@
 	$lang['strconfdropschema'] = 'Weet u zeker dat u het schema "%s" wilt verwijderen?';
 	$lang['strschemadropped'] = 'Schema verwijderd.';
 	$lang['strschemadroppedbad'] = 'Verwijdering van het schema mislukt.';
-	$lang['strtopbar'] = '%s draaiend op %s:%s -- U bent ingelogd als gebruiker "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- U bent ingelogd als gebruiker "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strondelete'] = 'ON DELETE';
 	$lang['stronupdate'] = 'ON UPDATE';

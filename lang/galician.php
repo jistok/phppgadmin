@@ -803,7 +803,7 @@
 	$lang['strtablespacealteredbad'] = 'Non se conseguiu modificar o alias de ruta.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s, executándose no enderezo %s:%s. Está identificado coma «%s».';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Está identificado coma «%s».';
 	$lang['strtimefmt'] = 'd/m/Y, G:i:s';
 	$lang['strhelp'] = 'Axuda';
 	$lang['strhelpicon'] = '?';

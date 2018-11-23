@@ -460,7 +460,7 @@
 	$lang['strschemadroppedbad'] = 'Misslyckades att radera schema.';
 
 	// Reports
-	$lang['strtopbar'] = '%s körs på %s:%s -- Du är inloggad som användare "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Du är inloggad som användare "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	
 	// Domains

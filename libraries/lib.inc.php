@@ -13,10 +13,10 @@
 	error_reporting(E_ALL);
  
 	// Application name
-	$appName = 'phpPgAdmin';
+	$appName = 'Pivotal Greenplum SQL Browser';
 
 	// Application version
-	$appVersion = '7.x-dev';
+	$appVersion = '7.0';
 
 	// PostgreSQL and PHP minimum version
 	$postgresqlMinVer = '7.4';
@@ -96,7 +96,7 @@
 	/* select the theme */
 	unset($_theme);
 	if (!isset($conf['theme']))
-		$conf['theme'] = 'default';
+		$conf['theme'] = 'pivotal';
 
 	// 1. Check for the theme from a request var
 	if (isset($_REQUEST['theme']) && is_file("./themes/{$_REQUEST['theme']}/global.css")) {

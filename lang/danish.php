@@ -494,7 +494,7 @@
 	$lang['strschemadroppedbad'] = 'Det lykkedes ikka at fjerne skema.';
 
 	// Reports
-	$lang['strtopbar'] = '%s kører på %s:%s -- Du er logged ind som bruger "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Du er logged ind som bruger "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	
 	// Domains

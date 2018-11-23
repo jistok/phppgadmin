@@ -709,7 +709,7 @@ $lang['straggrneedsstype']  =  'You must specify the data type for the aggregate
 
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s uruchomiony na %s:%s -- Jesteś zalogowany jako "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Jesteś zalogowany jako "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strhelp'] = 'Pomoc';
 	$lang['strhelpicon'] = '?';

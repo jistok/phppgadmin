@@ -353,7 +353,7 @@ $lang['strschemaname'] = '模式名称';
 
 
 // Miscellaneous
-$lang['strtopbar'] = '%s 架于 %s：%s － 您是 "%s"';
+$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace － 您是 "%s"';
 $lang['strtimefmt'] = 'jS M, Y g:iA';
 
 ?>

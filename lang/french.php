@@ -793,7 +793,7 @@
 	$lang['strtablespacealteredbad'] = 'Échec lors de la modification du tablespace.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s lancé sur %s:%s -- Vous êtes connecté avec le profil « %s »';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Vous êtes connecté avec le profil « %s »';
 	$lang['strtimefmt'] = 'j M Y, H:i';
 	$lang['strhelp'] = 'Aide';
 	$lang['strhelpicon'] = '?';

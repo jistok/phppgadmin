@@ -608,7 +608,7 @@
 	$lang['strtablespacealteredbad'] = 'עריכת מרחבון מכשלה.';
 	
 	// Miscellaneous
-	$lang['strtopbar'] = '%s רץ על %s:%s -- אתה מחובר כמשתמש - &quot;%s&quot;';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- אתה מחובר כמשתמש - &quot;%s&quot;';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strhelp'] = 'עזרה';
 

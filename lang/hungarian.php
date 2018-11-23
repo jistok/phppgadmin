@@ -791,7 +791,7 @@
 	$lang['strtablespacealteredbad']  =  'Nem sikerült megváltoztatni a táblahelyet.';
 	
 	// Miscellaneous
-	$lang['strtopbar'] = '%s fut %s:%s címen — Ön „%s” néven jelentkezett be.';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace — Ön „%s” néven jelentkezett be.';
 	$lang['strtimefmt'] = 'Y.m.d. H:i';
 	$lang['strhelp'] = 'Súgó';
 	$lang['strhelpicon']  =  '?';

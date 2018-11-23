@@ -708,7 +708,7 @@
 	$lang['strtablespacealteredbad'] = 'Η τροποποίηση της τοποθεσίας απέτυχε.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s στο %s:%s -- Είστε συνδεδεμένος ως "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Είστε συνδεδεμένος ως "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strhelp'] = 'Βοήθεια';
 	$lang['strhelpicon'] = '?';

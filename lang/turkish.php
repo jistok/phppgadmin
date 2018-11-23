@@ -629,7 +629,7 @@ $lang['strcannotdumponwindows']  =  'Dumping of complex table and schema names o
 	$lang['strtablespacealteredbad'] = 'Tablespace değiştirilemedi.';
 
 	// Miscellaneous
-	$lang['strtopbar']  =  '%s, %s:%s üzerinde çalışıyor-- "%s" kullanıcısı ile sisteme giriş yaptınız.';
+	$lang['strtopbar']  =  '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- "%s" kullanıcısı ile sisteme giriş yaptınız.';
         $lang['strtimefmt']  =  'jS M, Y g:iA';
         $lang['strhelp']  =  'Yardım';
 	$lang['strhelpicon'] = '?';

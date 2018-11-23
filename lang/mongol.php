@@ -520,7 +520,7 @@
 	$lang['strchildtables'] = 'фЯоХвЮЩХ дСТЬЩУй';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s зйаЯЬЮбХдгб ЮС %s:%s -- їй кСвХЧЩгдвЩвЯзСЮй ЫСЫ "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- їй кСвХЧЩгдвЩвЯзСЮй ЫСЫ "%s"';
 	$lang['strtimefmt'] = ' j-m-Y  g:i';
 
 ?>

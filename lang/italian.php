@@ -697,7 +697,7 @@
 	$lang['strtablespacealteredbad'] = 'Modifica del tablespace fallita.';
 
 	// Miscellaneous - Varie
-	$lang['strtopbar'] = '%s in esecuzione su %s:%s -- Utente "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Utente "%s"';
 	$lang['strtimefmt'] = 'j M Y - g:iA';
 	$lang['strhelp'] = 'Aiuto';
 	$lang['strhelpicon'] = '?';

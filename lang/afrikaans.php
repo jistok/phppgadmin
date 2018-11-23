@@ -612,7 +612,7 @@
 	$lang['strtablespacealteredbad'] = 'Wysiging van tabelruimte het misluk.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s loop op %s:%s -- Jy is aangeteken as gebruiker "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Jy is aangeteken as gebruiker "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strhelp'] = 'Hulp';
 	$lang['strhelpicon'] = '?';

@@ -635,7 +635,7 @@ $lang['strcluster']  =  'Cluster';
 	
 
 	// Miscellaneous
-	$lang['strtopbar']  =  '%s beží na %s:%s -- si prihlásený ako "%s"';
+	$lang['strtopbar']  =  '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- si prihlásený ako "%s"';
 	$lang['strtimefmt']  =  'jS M, Y g:iA';
 	$lang['strhelp']  =  'Pomoc';
 	$lang['strhelpicon']  =  '?';

@@ -716,7 +716,7 @@
 	$lang['strtablespacealteredbad'] = 'Modificare şpaţiu de tabele eşuată.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s rulând pe %s:%s -- Sunteţi autentificat ca utilizator "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Sunteţi autentificat ca utilizator "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strhelp'] = 'Ajutor';
 	$lang['strhelpicon'] = '?';

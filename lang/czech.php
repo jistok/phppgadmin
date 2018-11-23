@@ -791,7 +791,7 @@
 	$lang['strtablespacealteredbad'] = 'Nezdařilo se provést změny v prostoru tabulek.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '%s běžící na %s:%s -- Jste přihlášený jako uživatel „%s“';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Jste přihlášený jako uživatel „%s“';
 	$lang['strtimefmt'] = 'j. M Y G:i';
 	$lang['strhelp'] = 'Nápověda';
 	$lang['strhelpicon'] = '?';
