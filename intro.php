@@ -18,7 +18,7 @@
 	$misc->printTabs('root','intro');
 ?>
 
-<h1><?php echo "$appName $appVersion (PHP ". phpversion() .')' ?></h1>
+<h1><?php echo "$appName $appVersion" ?></h1>
 
 <form method="get" action="intro.php">
 <table>
@@ -37,7 +37,7 @@
 			</select>
 		</td>
 	</tr>
-	<tr class="data2">
+	<tr class="data2" style="display:none">
 		<th class="data"><?php echo $lang['strtheme'] ?></th>
 		<td>
 			<select name="theme" onchange="this.form.submit()">
@@ -55,9 +55,9 @@
 <noscript><p><input type="submit" value="<?php echo $lang['stralter'] ?>" /></p></noscript>
 </form>
 
-<p><?php echo $lang['strintro'] ?></p>
+<p style="display:none"><?php echo $lang['strintro'] ?></p>
 
-<ul class="intro">
+<ul  style="display:none" class="intro">
 	<li><a href="http://phppgadmin.sourceforge.net/"><?php echo $lang['strppahome'] ?></a></li>
 	<li><a href="<?php echo $lang['strpgsqlhome_url'] ?>"><?php echo $lang['strpgsqlhome'] ?></a></li>
 	<li><a href="http://sourceforge.net/tracker/?group_id=37132&amp;atid=418980"><?php echo $lang['strreportbug'] ?></a></li>

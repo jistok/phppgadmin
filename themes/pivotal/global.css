@@ -30,8 +30,8 @@ h2 {
 	font-size: medium; /*1.3em;*/
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-weight: bold;
-	border: 2px solid #E6E6CC;
-	background-color: #F3F3E9;
+	/* border: 2px solid #EFEFEF; */
+	background-color: #FFFFFF;
 	padding: 2px 1em;
 	margin: 0 0 1ex 0;
 }
@@ -41,8 +41,8 @@ h3 {
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-weight: bold;
 }
-table.error {background-color: #E6E6CC}
-table.error td {background-color: #E6E6CC}
+table.error {background-color: #FFFFFF}
+table.error td {background-color: #FFFFFF}
 table.navbar {background-color: #E6E6CC}
 table.navbar td {
 	height:	25px;
@@ -55,8 +55,9 @@ table.navbar td {
 }
 table.navbar td.active {background-color: #E6E6CC}
 th.data {
-	color: #000000;
-	background-color: #E6E6CC;
+	color: #64747F;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid gray;
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-size: smaller; /* 0.9em */
 }
@@ -95,15 +96,24 @@ tr.data1, tr.data2, tr.data3 {
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-size: smaller; /*0.8em;*/
 }
+tr.data1 td {
+	border-bottom:1pt solid #DCDCDC;
+	margin:0;
+}
+tr.data2 td {
+	border-bottom:1pt solid #DCDCDC;
+	margin:0;
+}
 tr.data1:hover, tr.data2:hover, tr.data3:hover {
-	background-color: #DDD;
+	background-color: #DCDCDC;
 }
 .row1, .data1 {
-	background-color: #F3F3E9;
+	background-color: #FFFFFF;
 	text-align: left;
 }
 .row2, .data2 {
-	background-color: #E6E6CC;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #706D41;
 	text-align: left;
 }
 .row3, .data3 {background-color: #F3F3E9}
@@ -166,7 +176,7 @@ table.tabs {
 	margin-bottom: 1ex;
 }
 .tab {text-align: center}
-.tabs .active {background-color: #E6E6CC}
+.tabs .active {background-color: #FFFFFF; border-bottom: 3px solid #49A49D;}
 .tab .icon {display: block}
 a:active {
 	color: #989973;
@@ -190,19 +200,20 @@ a:hover {
 	text-decoration: none;
 }
 a.navlink:link, a.toplink:link, ul.navlink li a, ul.toplink li a {
-	color: #336699;
+	color: #FFFFFF;
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-weight: bold;
 	text-decoration: none;
 }
 a.navlink:visited, a.toplink:visited, ul.navlink li a:visited, ul.toplink li a:visited {
-	color: #336699;
+	color: #FFFFFF;
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-weight: bold;
 	text-decoration: none;
 }
 a.navlink:hover, a.toplink:hover, ul.navlink li a:hover, ul.toplink li a:hover {
-	color: #cc0000;
+	/* color: #cc0000; */
+	border-bottom: 2px solid #EFEFEF;
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-weight: bold;
 	text-decoration: none;
