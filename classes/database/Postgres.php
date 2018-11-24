@@ -1094,6 +1094,15 @@ class Postgres extends ADODB_base {
 					FROM pg_catalog.pg_tables
 					WHERE schemaname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')
 					ORDER BY schemaname, tablename";
+			//JMFI
+			$sql = "SELECT n.nspname as Nspname, rel.relname AS relname, pgs.usename  as relowner
+                                FROM pg_class rel
+                                JOIN pg_namespace n ON n.oid = rel.relnamespace
+                                JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
+                                WHERE rel.relkind IN ('r','s','t')
+                                AND rel.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
+                                ORDER BY rel.relname";
+
 		} else {
 			$sql = "SELECT c.relname, pg_catalog.pg_get_userbyid(c.relowner) AS relowner,
 						pg_catalog.obj_description(c.oid, 'pg_class') AS relcomment,
@@ -1104,6 +1113,15 @@ class Postgres extends ADODB_base {
 					WHERE c.relkind = 'r'
 					AND nspname='{$c_schema}'
 					ORDER BY c.relname";
+			//JMFI
+			$sql = "SELECT n.nspname as Nspname, rel.relname AS relname, pgs.usename  as relowner
+                               	FROM pg_class rel
+                               	JOIN pg_namespace n ON n.oid = rel.relnamespace
+                               	JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
+                               	WHERE rel.relkind IN ('r','s','t')
+                               	AND nspname='{$c_schema}'
+                               	AND rel.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
+                               	ORDER BY rel.relname";
 		}
 
 		return $this->selectSet($sql);
