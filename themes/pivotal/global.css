@@ -43,11 +43,11 @@ h3 {
 }
 table.error {background-color: #FFFFFF}
 table.error td {background-color: #FFFFFF}
-table.navbar {background-color: #E6E6CC}
+table.navbar {background-color: #FFFFFF}
 table.navbar td {
 	height:	25px;
 	color: #000000;
-	background-color: #F3F3E9;
+	background-color: #FFFFFF;
 	text-align: center;
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-size: smaller; /* 0.9em */
@@ -119,10 +119,10 @@ tr.data1:hover, tr.data2:hover, tr.data3:hover {
 .row3, .data3 {background-color: #F3F3E9}
 td.opbutton1 {
 	color: #000000;
-	border-top:	1px solid #FFFFFF;
+	border-top:	1px solid #706D41;
 	border-right: 1px solid	#706D41;
 	border-bottom: 1px solid #706D41;
-	border-left: 1px solid #FFFFFF;
+	border-left: 1px solid #706D41;
 	cursor:	pointer;
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-size: smaller; /*0.8em;*/
@@ -132,10 +132,10 @@ td.opbutton1 {
 }
 td.opbutton2 {
 	color: #000000;
-	border-top:	1px solid #FFFFFF;
+	border-top:	1px solid #706D41;
 	border-right: 1px solid	#706D41;
 	border-bottom: 1px solid #706D41;
-	border-left: 1px solid #FFFFFF;
+	border-left: 1px solid #706D41;
 	cursor:	pointer;
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-size: smaller; /*0.8em;*/
@@ -204,6 +204,14 @@ a.navlink:link, a.toplink:link, ul.navlink li a, ul.toplink li a {
 	font-family: arial, tahoma, verdana, helvetica, sans-serif, serif;
 	font-weight: bold;
 	text-decoration: none;
+}
+ul.navlink {
+	background-color: #243641;
+	vertical-align: middle;
+	height: 18px;
+}
+a.navlink:hover, ul.navlink:hover {
+	border-bottom: 2px solid #EFEFEF;
 }
 a.navlink:visited, a.toplink:visited, ul.navlink li a:visited, ul.toplink li a:visited {
 	color: #FFFFFF;
