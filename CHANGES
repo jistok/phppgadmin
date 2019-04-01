@@ -1,0 +1,29 @@
+Pivotal changes to phpPgAdmin
+
+- conf/config.ini.php
+	Change $conf['servers'][0]['desc'] from PostgreSQL to Local Database
+	Change $conf['servers'][0]['defaultdb'] from template1 to postgres
+	Change $conf['servers'][0]['theme']['default'] from default to pivotal
+	Change $conf['theme'] from default to pivotal
+	Change $conf['servers'][0]['host'] from '' to 127.0.0.1
+
+- classes/database/Postgres.php
+	Change function getTables to exclude partitioned tables
+
+- images/themes
+	Added "pivotal" theme images
+
+- lang/*.php
+	Added style to Miscellaneous $lang['strtopbar']
+
+- libraries/lib.inc.php
+	Set theme to Pivotal
+
+- themes/pivotal/global.css
+	Added new css for Pivotal theme
+
+- intro.php
+	Made minor display changes
+
+- phpPgAdmin.conf
+	Added default file
