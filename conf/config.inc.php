@@ -11,10 +11,12 @@
 	// indexed from zero upwards.
 
 	// Display name for the server on the login screen
-	$conf['servers'][0]['desc'] = 'Greenplum';
+	// Pivotal change PostgreSQL to Local Database so it can be used with Postgres and Greenplum
+	$conf['servers'][0]['desc'] = 'Local Database';
 
 	// Hostname or IP address for server.  Use '' for UNIX domain socket.
 	// use 'localhost' for TCP/IP connection on this computer
+	// Pivotal change '' to 127.0.0.1
 	$conf['servers'][0]['host'] = '127.0.0.1';
 
 	// Database port on server (5432 is the PostgreSQL default)
@@ -28,13 +30,15 @@
 
 	// Change the default database only if you cannot connect to template1.
 	// For a PostgreSQL 8.1+ server, you can set this to 'postgres'.
-	$conf['servers'][0]['defaultdb'] = 'template1';
+	// Pivotal change template1 to postgres to prevent locking on template1
+	$conf['servers'][0]['defaultdb'] = 'postgres';
+	// Pivotal change default to pivotal
 	$conf['servers'][0]['theme']['default'] = 'pivotal';
 
 	// Specify the path to the database dump utilities for this server.
 	// You can set these to '' if no dumper is available.
-	$conf['servers'][0]['pg_dump_path'] = '';
-	$conf['servers'][0]['pg_dumpall_path'] = '';
+	$conf['servers'][0]['pg_dump_path'] = '/usr/bin/pg_dump';
+	$conf['servers'][0]['pg_dumpall_path'] = '/usr/bin/pg_dumpall';
 
 	// Example for a second server (PostgreSQL for Windows)
 	//$conf['servers'][1]['desc'] = 'Test Server';
@@ -109,7 +113,7 @@
 	// Note: This will simply hide other databases in the list - this does
 	// not in any way prevent your users from seeing other database by
 	// other means. (e.g. Run 'SELECT * FROM pg_database' in the SQL area.)
-	$conf['owned_only'] = true;
+	$conf['owned_only'] = false;
 
 	// Display comments on objects?  Comments are a good way of documenting
 	// a database, but they do take up space in the interface.
@@ -131,6 +135,7 @@
 	$conf['left_width'] = 200;
 
 	// Which look & feel theme to use
+	// Pivotal change default to pivotal
 	$conf['theme'] = 'pivotal';
 
 	// Show OIDs when browsing tables?

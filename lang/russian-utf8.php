@@ -788,7 +788,7 @@
 	$lang['strtablespacealteredbad'] = 'Изменение табличного пространства прервано.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Вы зарегистрированы как "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div> -- Вы зарегистрированы как "%s"';
 	$lang['strtimefmt'] = ' j-m-Y  g:i';
 	$lang['strhelp'] = 'Помощь';
 	$lang['strhelpicon'] = '?';

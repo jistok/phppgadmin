@@ -13,10 +13,10 @@
 	error_reporting(E_ALL);
  
 	// Application name
-	$appName = 'Pivotal Greenplum SQL Browser';
+	$appName = 'phpPgAdmin';
 
 	// Application version
-	$appVersion = '7.0';
+	$appVersion = '5.6.1';
 
 	// PostgreSQL and PHP minimum version
 	$postgresqlMinVer = '7.4';

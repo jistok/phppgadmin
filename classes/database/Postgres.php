@@ -1090,20 +1090,18 @@ class Postgres extends ADODB_base {
 		$this->clean($c_schema);
 		if ($all) {
 			// Exclude pg_catalog and information_schema tables
-			$sql = "SELECT schemaname AS nspname, tablename AS relname, tableowner AS relowner
-					FROM pg_catalog.pg_tables
-					WHERE schemaname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')
-					ORDER BY schemaname, tablename";
-			//JMFI
-			$sql = "SELECT n.nspname as Nspname, rel.relname AS relname, pgs.usename  as relowner
-                                FROM pg_class rel
-                                JOIN pg_namespace n ON n.oid = rel.relnamespace
-                                JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
-                                WHERE rel.relkind IN ('r','s','t')
-                                AND rel.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
-                                ORDER BY rel.relname";
+			//Pivotal: Hide partitioned tables
+			$sql = "SELECT n.nspname as nspname, rel.relname AS relname, pgs.usename as relowner
+					FROM pg_class rel
+					JOIN pg_namespace n ON n.oid = rel.relnamespace
+					JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
+					WHERE rel.relkind IN ('r','s','t')
+					AND rel.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
+					AND n.nspname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')
+                                	ORDER BY n.nspname, rel.relname";
 
 		} else {
+			//Pivotal: Hide partitioned tables
 			$sql = "SELECT c.relname, pg_catalog.pg_get_userbyid(c.relowner) AS relowner,
 						pg_catalog.obj_description(c.oid, 'pg_class') AS relcomment,
 						reltuples::bigint,
@@ -1112,16 +1110,8 @@ class Postgres extends ADODB_base {
 					LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
 					WHERE c.relkind = 'r'
 					AND nspname='{$c_schema}'
+					AND c.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
 					ORDER BY c.relname";
-			//JMFI
-			$sql = "SELECT n.nspname as Nspname, rel.relname AS relname, pgs.usename  as relowner
-                               	FROM pg_class rel
-                               	JOIN pg_namespace n ON n.oid = rel.relnamespace
-                               	JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
-                               	WHERE rel.relkind IN ('r','s','t')
-                               	AND nspname='{$c_schema}'
-                               	AND rel.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
-                               	ORDER BY rel.relname";
 		}
 
 		return $this->selectSet($sql);

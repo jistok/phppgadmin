@@ -792,7 +792,7 @@
 	$lang['strtablespacealteredbad'] = 'Falha ao alterar o tablespace.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Você está logado como usuário "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div> -- Você está logado como usuário "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strhelp'] = 'Ajuda';
 	$lang['strhelpicon'] = '?';

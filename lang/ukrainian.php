@@ -577,7 +577,7 @@
         $lang['strrows2'] = 'Записи';
 
         // Miscellaneous
-        $lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Ви зареєструвались як "%s"';
+        $lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div> -- Ви зареєструвались як "%s"';
         $lang['strtimefmt'] = ' j-m-Y  g:i';
         $lang['strhelp'] = 'Допомога';
 

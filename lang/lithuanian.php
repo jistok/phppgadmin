@@ -792,7 +792,7 @@ $lang['strtoastindex'] = 'TOAST Indeksas';
 	$lang['strtablespacealteredbad'] = 'Nepavyko pakeisti lentelių erdvės.';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Jūs esate prisijungęs kaip "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div> -- Jūs esate prisijungęs kaip "%s"';
 	$lang['strtimefmt'] = 'j M Y - g:iA';
 	$lang['strhelp'] = 'Pagalba';
 	$lang['strhelpicon'] = '?';

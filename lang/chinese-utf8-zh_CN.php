@@ -791,7 +791,7 @@
 	$lang['strtablespacealteredbad'] = '表空间变更失败。';
 	
 	// Miscellaneous
-	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace － 您是 "%s"';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div> － 您是 "%s"';
 	$lang['strtimefmt'] = 'jS M, Y g:iA';
 	$lang['strhelp'] = '帮助';
 	$lang['strhelpicon'] = '?';

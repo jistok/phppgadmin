@@ -18,6 +18,7 @@ Pivotal changes to phpPgAdmin
 
 - libraries/lib.inc.php
 	Set theme to Pivotal
+	Change $appVersion to 5.6.1
 
 - themes/pivotal/global.css
 	Added new css for Pivotal theme

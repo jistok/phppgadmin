@@ -408,7 +408,7 @@ $lang['strschemadroppedbad'] = 'Falha ao eliminar o esquema.';
 // Reports
 
 // Miscellaneous
-$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- Você está ligado como "%s"';
+$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div> -- Você está ligado como "%s"';
 $lang['strtimefmt'] = 'jS M, Y g:iA';
 
 

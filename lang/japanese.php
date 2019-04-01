@@ -758,7 +758,7 @@ $lang['strtrusted'] = 'Trusted';
 	$lang['strtablespacealteredbad'] = 'テーブル空間の変更に失敗しました。';
 
 	// Miscellaneous
-	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div>Pivotal Greenplum Marketplace -- ユーザー「%4$s」としてログイン中';
+	$lang['strtopbar'] = '<div style="display:none">%s running on %s:%s</div> -- ユーザー「%4$s」としてログイン中';
 	$lang['strtimefmt'] = 'Y 年 n 月 j 日 G:i';
 	$lang['strhelp'] = 'ヘルプ';
 	$lang['strhelpicon'] = '?';
