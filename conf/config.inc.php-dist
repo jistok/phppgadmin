@@ -11,8 +11,8 @@
 	// indexed from zero upwards.
 
 	// Display name for the server on the login screen
-	// Pivotal change PostgreSQL to Local Database so it can be used with Postgres and Greenplum
-	$conf['servers'][0]['desc'] = 'Local Database';
+	// Pivotal change PostgreSQL to Pivotal Database so it can be used with Postgres and Greenplum
+	$conf['servers'][0]['desc'] = 'Pivotal Database';
 
 	// Hostname or IP address for server.  Use '' for UNIX domain socket.
 	// use 'localhost' for TCP/IP connection on this computer

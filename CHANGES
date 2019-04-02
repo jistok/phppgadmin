@@ -1,13 +1,14 @@
 Pivotal changes to phpPgAdmin
 
-- conf/config.ini.php
-	Change $conf['servers'][0]['desc'] from PostgreSQL to Local Database
+- conf/config.inc.php
+	Change $conf['servers'][0]['desc'] from PostgreSQL to Pivotal Database
 	Change $conf['servers'][0]['defaultdb'] from template1 to postgres
 	Change $conf['servers'][0]['theme']['default'] from default to pivotal
 	Change $conf['theme'] from default to pivotal
 	Change $conf['servers'][0]['host'] from '' to 127.0.0.1
 
 - classes/database/Postgres.php
+	Added function to check for Greenplum
 	Change function getTables to exclude partitioned tables
 
 - images/themes
