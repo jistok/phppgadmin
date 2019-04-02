@@ -1088,30 +1088,53 @@ class Postgres extends ADODB_base {
 	function getTables($all = false) {
 		$c_schema = $this->_schema;
 		$this->clean($c_schema);
+		$gp = $this->isGreenplum();
 		if ($all) {
 			// Exclude pg_catalog and information_schema tables
-			//Pivotal: Hide partitioned tables
-			$sql = "SELECT n.nspname as nspname, rel.relname AS relname, pgs.usename as relowner
-					FROM pg_class rel
-					JOIN pg_namespace n ON n.oid = rel.relnamespace
-					JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
-					WHERE rel.relkind IN ('r','s','t')
-					AND rel.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
-					AND n.nspname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')
-                                	ORDER BY n.nspname, rel.relname";
-
+			if($gp) {
+				//Pivotal: Hide partitioned tables
+				$sql = "SELECT n.nspname as nspname, rel.relname AS relname, pgs.usename as relowner
+						FROM pg_class rel
+						JOIN pg_namespace n ON n.oid = rel.relnamespace
+						JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
+						WHERE rel.relkind IN ('r','s','t')
+						AND n.nspname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')
+						AND rel.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
+						ORDER BY n.nspname, rel.relname";
+			} else {
+				$sql = "SELECT n.nspname as nspname, rel.relname AS relname, pgs.usename as relowner
+						FROM pg_class rel
+						JOIN pg_namespace n ON n.oid = rel.relnamespace
+						JOIN pg_shadow pgs on rel.relowner = pgs.usesysid
+						WHERE rel.relkind IN ('r','s','t')
+						AND n.nspname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')
+						ORDER BY n.nspname, rel.relname";
+			}
 		} else {
-			//Pivotal: Hide partitioned tables
-			$sql = "SELECT c.relname, pg_catalog.pg_get_userbyid(c.relowner) AS relowner,
-						pg_catalog.obj_description(c.oid, 'pg_class') AS relcomment,
-						reltuples::bigint,
-						(SELECT spcname FROM pg_catalog.pg_tablespace pt WHERE pt.oid=c.reltablespace) AS tablespace
-					FROM pg_catalog.pg_class c
-					LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-					WHERE c.relkind = 'r'
-					AND nspname='{$c_schema}'
-					AND c.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
-					ORDER BY c.relname";
+			if($gp) {
+				//Pivotal: Hide partitioned tables
+				$sql = "SELECT c.relname, pg_catalog.pg_get_userbyid(c.relowner) AS relowner,
+							pg_catalog.obj_description(c.oid, 'pg_class') AS relcomment,
+							reltuples::bigint,
+							(SELECT spcname FROM pg_catalog.pg_tablespace pt WHERE pt.oid=c.reltablespace) AS tablespace
+						FROM pg_catalog.pg_class c
+						LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+						WHERE c.relkind = 'r'
+						AND nspname='{$c_schema}'
+						AND c.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
+						ORDER BY c.relname";
+			} else {
+				$sql = "SELECT c.relname, pg_catalog.pg_get_userbyid(c.relowner) AS relowner,
+							pg_catalog.obj_description(c.oid, 'pg_class') AS relcomment,
+							reltuples::bigint,
+							(SELECT spcname FROM pg_catalog.pg_tablespace pt WHERE pt.oid=c.reltablespace) AS tablespace
+						FROM pg_catalog.pg_class c
+						LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+						WHERE c.relkind = 'r'
+						AND nspname='{$c_schema}'
+						AND c.relname NOT IN (SELECT partitiontablename FROM pg_partitions)
+						ORDER BY c.relname";
+			}
 		}
 
 		return $this->selectSet($sql);
@@ -6474,6 +6497,17 @@ class Postgres extends ADODB_base {
 		$usesuper = $this->selectField($sql, 'usesuper');
 		if ($usesuper == -1) return false;
 		else return $usesuper == 't';
+	}
+
+	/**
+	 * Determines if database is Greenplum or not
+	*/
+	function isGreenplum() {
+		$sql = "select case when position ('Greenplum' in version()) > 0 then 1 else 0 end";
+
+		$dbgreenplum = $this->selectField($sql, 'dbgreenplum');
+		if ($dbgreenplum == 0) return false;
+		else return $dbgreenplum == 't';
 	}
 
 	/**
